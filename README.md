@@ -7,6 +7,7 @@ It's a whole new world
 - [yoshuawuyts/knowledge](https://github.com/yoshuawuyts/knowledge)
 - [yoshuawuyts/templates](https://github.com/yoshuawuyts/templates)
 - [yoshuawuyts/writing](https://github.com/yoshuawuyts/writing)
+- [yoshuawuyts/speaking](https://github.com/yoshuawuyts/speaking)
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
