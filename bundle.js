@@ -3269,6 +3269,12 @@ module.exports = [
 },{}],33:[function(require,module,exports){
 const html = require('choo/html')
 
+const intro = `
+  Hi, I'm yosh. This is my brain. It me. Welcome. I'm building stuff; probably
+  building up to something too. I'm not sure what, but you're welcome to join.
+  Explore. Enjoy. ✌️
+`
+
 const projects = [
   {
     name: 'dotfiles',
@@ -3305,9 +3311,7 @@ function mainView (state, prev, send) {
         yosh_land
         <span>/</span>
       </h1>
-      <h2 class="f5 f4-ns measure lh-copy mt0">
-        Welcome to the yosh land
-      </h2>
+      <h2 class="f5 f4-ns measure lh-copy mt0">${intro}</h2>
       <section class="flex flex-row flex-wrap">
         ${projects.map(ghLink)}
       </section>
