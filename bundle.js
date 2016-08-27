@@ -3266,46 +3266,78 @@ module.exports = [
   'onfocusout'
 ]
 
-},{}],"bankai-app":[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 const html = require('choo/html')
+
+const projects = [
+  {
+    name: 'dotfiles',
+    description: 'OS X configuration files'
+  },
+  {
+    name: 'infrastructure',
+    description: 'Container infrastructure files'
+  },
+  {
+    name: 'knowledge',
+    description: 'Document everything'
+  },
+  {
+    name: 'templates',
+    description: 'Template files'
+  },
+  {
+    name: 'writing',
+    description: 'Macro blog'
+  },
+  {
+    name: 'speaking',
+    description: 'Meat blog'
+  }
+]
+
+module.exports = mainView
+
+function mainView (state, prev, send) {
+  return html`
+    <main class="ph3 ph5-ns pb5 black-70">
+      <h1 class="f2 f1-ns fw6 mb2">
+        yosh_land
+        <span>/</span>
+      </h1>
+      <h2 class="f5 f4-ns measure lh-copy mt0">
+        Welcome to the yosh land
+      </h2>
+      <section class="flex flex-row flex-wrap">
+        ${projects.map(ghLink)}
+      </section>
+    </main>
+  `
+}
+
+function ghLink (obj) {
+  const name = obj.name
+  const desc = obj.description
+  return html`
+    <article class="pv2 w-100 w-50-l pr0 pr2-l">
+      <a href="https://github.com/yoshuawuyts/${name}">
+        <h3 class="f4 f2-ns fw6 mb2">${name}</h3>
+      </a>
+      <p class="f5 f4-ns measure lh-copy mt0">${desc}</p>
+    </article>
+  `
+}
+
+},{"choo/html":10}],"bankai-app":[function(require,module,exports){
 const css = 0
 const choo = require('choo')
 
 ;((null || true) && "_706c6aca")
 
 const app = choo()
-app.router((route) => [ route('/', mainView) ])
+app.router((route) => [ route('/', require('./pages/main')) ])
 
 const tree = app.start()
 document.body.appendChild(tree)
 
-function mainView (state, prev, send) {
-  const projects = [
-    'dotfiles',
-    'infrastructure',
-    'knowledge',
-    'templates',
-    'writing',
-    'speaking'
-  ]
-  return html`<main>
-    <h1>yosh land</h1>
-      <h2>Welcome to the yosh land</h2>
-      ${ghLinks(projects)}
-    </main>
-  `
-}
-
-function ghLinks (names) {
-  return names.map(ghLink)
-}
-
-function ghLink (name) {
-  return html`
-    <a href="https://github.com/yoshuawuyts/${name}">
-      <h3>${name}</h3>
-    </a>
-  `
-}
-
-},{"choo":11,"choo/html":10,"insert-css":18}]},{},["bankai-app"]);
+},{"./pages/main":33,"choo":11,"insert-css":18}]},{},["bankai-app"]);
