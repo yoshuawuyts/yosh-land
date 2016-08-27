@@ -1,5 +1,7 @@
 # yosh-land
-It's a whole new world
+Hi, I'm yosh. This is my brain. It me. Welcome. I'm building stuff; probably
+building up to something too. I'm not sure what, but you're welcome to join.
+Explore. Enjoy. ✌️
 
 ## Content
 - Welcome to the Yosh land
