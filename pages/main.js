@@ -37,11 +37,13 @@ module.exports = mainView
 
 function mainView (state, prev, send) {
   return html`
-    <main class="ph3 ph5-ns pb5 black-70">
-      <h1 class="f2 f1-ns fw6 mb2">
-        yosh_land
-        <span>/</span>
-      </h1>
+    <main class="ph3 ph5-ns pb5 bg-washed-green black-70">
+      <section class="pt3 pt5-ns">
+        <h1 class="f2 f1-ns fw6 mb2">
+          yosh_land
+          <span>/</span>
+        </h1>
+      </section>
       <h2 class="f5 f4-ns measure lh-copy mt0">${intro}</h2>
       <section class="flex flex-row flex-wrap">
         ${projects.map(ghLink)}
