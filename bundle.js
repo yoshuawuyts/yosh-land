@@ -3321,7 +3321,7 @@ function ghLink (obj) {
   return html`
     <article class="pv2 w-100 w-50-l pr0 pr2-l">
       <a href="https://github.com/yoshuawuyts/${name}">
-        <h3 class="f4 f2-ns fw6 mb2">${name}</h3>
+        <h3 class="dib underline f4 f2-ns fw6 mb2">${name}</h3>
       </a>
       <p class="f5 f4-ns measure lh-copy mt0">${desc}</p>
     </article>
