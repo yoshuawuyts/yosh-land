@@ -3307,7 +3307,7 @@ module.exports = mainView
 function mainView (state, prev, send) {
   return html`
     <main class="ph3 ph5-ns pb5 bg-washed-green black-70">
-      <section class="pt3">
+      <section class="pt3 pt5-ns">
         <h1 class="f2 f1-ns fw6 mb2">
           yosh_land
           <span>/</span>
